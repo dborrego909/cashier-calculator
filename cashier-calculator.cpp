@@ -22,15 +22,34 @@ int main() {
 	cout << "Unit name: " ; cin >> unit_name1;
 	cout << "Unit price: "; cin >> unit_price1;
 	cout << "Unit quantity: "; cin >> unit_quantity1;
-
+	cout << "\n";
 	int total_cost1 = unit_quantity1 * unit_price1;
+
+
+	cout << "Unit name: " ; cin >> unit_name2;
+	cout << "Unit price: "; cin >> unit_price2;
+	cout << "Unit quantity: "; cin >> unit_quantity2;
+	cout << "\n";
+	int total_cost2 = unit_quantity2 * unit_price2;
+
+	cout << "Unit name: " ; cin >> unit_name3;
+	cout << "Unit price: "; cin >> unit_price3;
+	cout << "Unit quantity: "; cin >> unit_quantity3;
+	cout << "\n";
+	int total_cost3 = unit_quantity3 * unit_price3;
 
 	cout << "$--------------- Cost Summary ---------------$" << endl;
 	cout << setw(15) << left << "Item" << setw(15) << left << "Price" << setw(15)
 	<< left << "Quantity" << setw(15) << left << "Cost" << endl;
-	cout << "------------------------------------------------------------\n" << endl;
-	cout << setw(15) << left << unit_name1 << setw(15) << left << "$" << unit_price1
-		<< setw(15) << left << unit_quantity1 << setw(15) << left << "$" << total_cost1 << endl;
+	cout << "------------------------------------------------------------" << endl;
+	cout << setw(15) << left << unit_name1 << setw(15) << left << "$" + to_string(unit_price1) 
+		<< setw(15) << left << unit_quantity1 << setw(15) << left << "$" + to_string(total_cost1)<< endl;
+	
+	cout << setw(15) << left << unit_name2 << setw(15) << left << "$" + to_string(unit_price2) 
+		<< setw(15) << left << unit_quantity2 << setw(15) << left << "$" + to_string(total_cost2)<< endl;
+	
+	cout << setw(15) << left << unit_name3 << setw(15) << left << "$" + to_string(unit_price3) 
+		<< setw(15) << left << unit_quantity3 << setw(15) << left << "$" + to_string(total_cost3)<< endl;
 	
 
 }
