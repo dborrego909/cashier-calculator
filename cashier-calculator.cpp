@@ -23,11 +23,14 @@ int main() {
 	cout << "Unit price: "; cin >> unit_price1;
 	cout << "Unit quantity: "; cin >> unit_quantity1;
 
-	cout << "$--------------- Cost Summary ---------------$" << endl;
-	cout << setw(10) << left << "Item" << setw(10) << left << "Price" << setw(10)
-	<< left << "Quantity" << setw(10) << left << "Cost" << endl;
-	cout << "------------------------------------------------------------\n" << endl;
+	int total_cost1 = unit_quantity1 * unit_price1;
 
+	cout << "$--------------- Cost Summary ---------------$" << endl;
+	cout << setw(15) << left << "Item" << setw(15) << left << "Price" << setw(15)
+	<< left << "Quantity" << setw(15) << left << "Cost" << endl;
+	cout << "------------------------------------------------------------\n" << endl;
+	cout << setw(15) << left << unit_name1 << setw(15) << left << "$" << unit_price1
+		<< setw(15) << left << unit_quantity1 << setw(15) << left << "$" << total_cost1 << endl;
 	
 
 }
