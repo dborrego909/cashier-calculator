@@ -16,8 +16,7 @@ int main() {
 	string unit_name3;
 	int unit_price3;
 	int unit_quantity3;
-    int grand_total;
-	int tax_rate;
+    float tax_rate;
 
 	cout << "Unit name: " ; cin >> unit_name1;
 	cout << "Unit price: "; cin >> unit_price1;
@@ -40,6 +39,8 @@ int main() {
 
     cout << "What is the local tax rate?: "; cin >> tax_rate;
 
+    tax_rate = tax_rate / 100; 
+    int subtotal = total_cost1 + total_cost2 + total_cost3;
     
 	cout << "$--------------- Cost Summary ---------------$" << endl;
 	cout << setw(15) << left << "Item" << setw(15) << left << "Price" << setw(15)
@@ -54,7 +55,11 @@ int main() {
 	cout << setw(15) << left << unit_name3 << setw(15) << left << "$" + to_string(unit_price3) 
 		<< setw(15) << left << unit_quantity3 << setw(15) << left << "$" + to_string(total_cost3)<< endl;
 	
+    double grand_total = subtotal * tax_rate;
+    grand_total += subtotal;
 
 	cout << "$--------------- Subltotal  --------------$\n" << endl;
-    cout << "$" << grand_total << endl; 
+    cout << "$" << subtotal << "\n" <<  endl; 
+	cout << "$--------------- Grand Total  --------------$\n" << endl;
+    cout << "$" << grand_total << "\n" << endl;
 }
