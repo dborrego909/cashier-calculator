@@ -1,3 +1,13 @@
+// cashier-calculator.cpp
+// Daniel Borrego
+// 06.11.24
+// Course: COMPSCI-1-35513
+// Description: This program is a simple POS for 3 items that shows the summary
+//      of sale, subtotal, grand total
+// Usage: This program will ask for the user for input, items, price, quantity
+//      and show total
+
+
 #include<iostream>
 #include<cmath>
 #include<iomanip>
@@ -62,4 +72,18 @@ int main() {
     cout << "$" << subtotal << "\n" <<  endl; 
 	cout << "$--------------- Grand Total  --------------$\n" << endl;
     cout << "$" << grand_total << "\n" << endl;
+
+
+	cout << "------------------------------------------------------------" << endl;
+
+    double amount_tendered;
+    cout << "Total is " << grand_total << ". How much do you have?" << endl;
+    cin >> amount_tendered;
+    
+
+    // init variables hundred, twenty, ten, five, one, quarter, dime, nickel, penny,
+
+	cout << "$--------------- Change  --------------$\n" << endl;
+    cout << "$" << amount_tendered - grand_total << endl;
+
 }
