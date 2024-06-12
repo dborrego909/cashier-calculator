@@ -58,7 +58,7 @@ int main() {
     double grand_total = subtotal * tax_rate;
     grand_total += subtotal;
 
-	cout << "$--------------- Subltotal  --------------$\n" << endl;
+	cout << "$--------------- Subtotal  --------------$\n" << endl;
     cout << "$" << subtotal << "\n" <<  endl; 
 	cout << "$--------------- Grand Total  --------------$\n" << endl;
     cout << "$" << grand_total << "\n" << endl;
