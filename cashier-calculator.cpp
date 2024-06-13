@@ -111,7 +111,6 @@ int main() {
       cout << setw(15) << left  << "Tens:" << ten << endl;
       cout << setw(15) << left  << "Fives:" << five << endl;
       cout << setw(15) << left  << "Ones:" << one << endl;
-
       cout << setw(15) << left  << "Quarters:" << quarter  << endl; 
       cout << setw(15) << left  << "Dimes:" << dime << endl;
       cout << setw(15) << left  << "Nickels:" << nickel << endl;
