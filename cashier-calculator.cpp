@@ -86,9 +86,12 @@ int main() {
     // init variables hundred, twenty, ten, five, one, quarter, dime, nickel, penny,
     double change = amount_tendered - grand_total;
 	cout << "$--------------- Change  --------------$\n" << endl;
-    cout << "$" <<change<< endl;
+    cout << "$" <<change<< "\n" << endl;
     change *= 100;
-    int intchange = static_cast<int>(change);
+    // Penny off for some reason.. adding .5 because if change would round up
+    // + .5 would bring it to the next digit and the conversion will prevent
+    // a number that wouldnt round up to stay the same. 
+    int intchange = static_cast<int>(change + 0.5);
 
     int hundred, twenty, ten, five, one, quarter, dime, nickel, penny;
     hundred = change/10000;
@@ -101,7 +104,8 @@ int main() {
     nickel = (intchange%10)/5;
     penny = (intchange%5)/1;
     
-    cout << intchange << " This is the intchange var" << endl;
+	cout << "------------------------------------------------------------\n" << endl;
+    cout << "Denominations ..." << endl; 
       cout << setw(15) << left  << "Hundreds:" << hundred << endl; 
       cout << setw(15) << left  << "Twenties:" << twenty  << endl; 
       cout << setw(15) << left  << "Tens:" << ten << endl;
