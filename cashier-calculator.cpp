@@ -56,6 +56,8 @@ int main() {
 	cout << setw(15) << left << "Item" << setw(15) << left << "Price" << setw(15)
 	<< left << "Quantity" << setw(15) << left << "Cost" << endl;
 	cout << "------------------------------------------------------------" << endl;
+    
+    // Breakdown of the items bought , then quantity, then price, then total price for each item
 	cout << setw(15) << left << unit_name1 << setw(15) << left << "$" + to_string(unit_price1) 
 		<< setw(15) << left << unit_quantity1 << setw(15) << left << "$" + to_string(total_cost1)<< endl;
 	
@@ -82,8 +84,33 @@ int main() {
     
 
     // init variables hundred, twenty, ten, five, one, quarter, dime, nickel, penny,
-
+    double change = amount_tendered - grand_total;
 	cout << "$--------------- Change  --------------$\n" << endl;
-    cout << "$" << amount_tendered - grand_total << endl;
+    cout << "$" <<change<< endl;
+    change *= 100;
+    int intchange = static_cast<int>(change);
+
+    int hundred, twenty, ten, five, one, quarter, dime, nickel, penny;
+    hundred = change/10000;
+    twenty = (intchange%10000)/2000;
+    ten = ((intchange%10000)%2000)/1000;
+    five = (intchange%1000)/500;
+    one = ((intchange%1000)%500)/100;
+    quarter = (intchange%100)/25;
+    dime = ((intchange%25)/10);
+    nickel = (intchange%10)/5;
+    penny = (intchange%5)/1;
+    
+    cout << intchange << " This is the intchange var" << endl;
+      cout << setw(15) << left  << "Hundreds:" << hundred << endl; 
+      cout << setw(15) << left  << "Twenties:" << twenty  << endl; 
+      cout << setw(15) << left  << "Tens:" << ten << endl;
+      cout << setw(15) << left  << "Fives:" << five << endl;
+      cout << setw(15) << left  << "Ones:" << one << endl;
+
+      cout << setw(15) << left  << "Quarters:" << quarter  << endl; 
+      cout << setw(15) << left  << "Dimes:" << dime << endl;
+      cout << setw(15) << left  << "Nickels:" << nickel << endl;
+      cout << setw(15) << left  << "Pennies:" << penny << endl;
 
 }
