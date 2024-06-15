@@ -11,6 +11,8 @@
 #include<iostream>
 #include<cmath>
 #include<iomanip>
+#include<string>
+#include<limits>
 using namespace std;
 
 int main() {
@@ -28,20 +30,22 @@ int main() {
 	int unit_quantity3;
     float tax_rate;
 
-	cout << "Unit name: " ; cin >> unit_name1;
+	cout << "Unit name: " ;getline(cin, unit_name1);// cin >> unit_name1;
 	cout << "Unit price for " << unit_name1 << ": "; cin >> unit_price1;
 	cout << "Unit quantity for " << unit_name1 << ": "; cin >> unit_quantity1;
 	cout << "\n";
 	int total_cost1 = unit_quantity1 * unit_price1;
 
 
-	cout << "Unit name: " ; cin >> unit_name2;
+  cin.ignore(numeric_limits<streamsize>::max(), '\n');
+	cout << "Unit name: " ;getline(cin, unit_name2);// cin >> unit_name2;
 	cout << "Unit price for " << unit_name2 << ": "; cin >> unit_price2;
 	cout << "Unit quantity for " << unit_name2 << ": "; cin >> unit_quantity2;
 	cout << "\n";
 	int total_cost2 = unit_quantity2 * unit_price2;
 
-	cout << "Unit name: " ; cin >> unit_name3;
+  cin.ignore(numeric_limits<streamsize>::max(), '\n');
+	cout << "Unit name: " ;getline(cin, unit_name3);// cin >> unit_name3;
 	cout << "Unit price for " << unit_name3 << ": "; cin >> unit_price3;
 	cout << "Unit quantity for" << unit_name3 << ": "; cin >> unit_quantity3;
 	cout << "\n";
