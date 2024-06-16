@@ -16,7 +16,7 @@
 using namespace std;
 
 int main() {
-	cout << "---------- Pather Express Cashout Super Program ----------\n" << endl;
+	cout << "---------- Pantsome help to make it like the second.her Express Cashout Super Program ----------\n" << endl;
 	string unit_name1;
 	int unit_price1;
 	int unit_quantity1;
